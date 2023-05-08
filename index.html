@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <style>
+
+            @font-face {
+                font-family: vazir;
+                src: url('/assets/vazir/Vazirmatn-Regular.woff2') format('woff2');
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            body{
+                background-color: #000;
+                direction: rtl;
+                color:#fff;
+                font-family: vazir;
+                font-weight: 400;
+            }
+            *,*:after,*:before{
+                box-sizing:border-box;
+            }
+            ul,li{list-style: none;}
+            a{
+                text-decoration: none;
+                color: #fff;
+             }
+            .section1Style{
+                margin-top: 40px;
+                text-align: center;
+                font-size: 60px;
+            }
+            h2{
+                margin-top: 40px;
+                padding-right: 30px;
+            }
+            ul{
+                display:flex;
+                align-items: center;
+                text-align: center;
+            }
+             ul li{
+                width:14.28%;
+                padding-left: 15px;
+            }
+             ul li img{
+                width:100%;
+                height: auto;
+                border-radius: 50%;
+            }   
+        </style>
+    </head>
+    <body>
+        <script>
+              var section1 = document.createElement("div");
+              section1.innerHTML="solution1";
+           document.body.appendChild(section1);
+           section1.classList.add("section1Style");
+            var starTitle = document.createElement("h2");
+            starTitle.innerHTML="ستارگان";
+           document.body.appendChild(starTitle);
+           var starlist = document.createElement("div");
+           starlist.classList.add("starlistStyle");
+            var listArry=[
+                {
+                image:"https://static.namava.ir/Content/Upload/Images/e10c2fa2-8131-4b2f-b35c-6348b0ebcc1c.jpg?anchor=middlecenter&crop=auto&scale=both&w=140&h=140",
+                title:"آناد آرماس",
+                link:"https://www.namava.ir/person-13941-%D8%A2%D9%86%D8%A7_%D8%AF_%D8%A2%D8%B1%D9%85%D8%A7%D8%B3"
+                },
+                 {
+                image:"https://static.namava.ir/Content/Upload/Images/dc8f18d1-20bd-476e-b0da-715d5d9ebd3a.jpg?anchor=middlecenter&crop=auto&scale=both&w=140&h=140",
+                title:"برند فریز",
+                link:"https://www.namava.ir/person-1134-%D8%A8%D8%B1%D9%86%D8%AF%D9%86_%D9%81%D8%B1%DB%8C%D8%B2%D8%B1"
+                },
+                  {
+                image:"https://static.namava.ir/Content/Upload/Images/710f6070-1be1-4ff0-9856-cfc2070d4c2b.jpg?anchor=middlecenter&crop=auto&scale=both&w=140&h=140",
+                title:"کالین فرل",
+                link:"https://www.namava.ir/person-1278-%DA%A9%D8%A7%D9%84%DB%8C%D9%86_%D9%81%D8%B1%D9%84"
+                },
+                 {
+                image:"https://static.namava.ir/Content/Upload/Images/33ef2e87-ec14-43af-bb99-1ae2c2b7d6fb.jpg?anchor=middlecenter&crop=auto&scale=both&w=140&h=140",
+                title:"کیت بلانشت",
+                link:"https://www.namava.ir/person-990-%DA%A9%DB%8C%D8%AA_%D8%A8%D9%84%D8%A7%D9%86%D8%B4%D8%AA"
+                },
+                  {
+                image:"https://static.namava.ir/Content/Upload/Images/7d9eb816-674f-4c33-bb9c-a1aefd63ba07.jpg?anchor=middlecenter&crop=auto&scale=both&w=140&h=140",
+                title:"کریس ایوانز",
+                link:"https://www.namava.ir/person-588-%DA%A9%D8%B1%DB%8C%D8%B3_%D8%A7%DB%8C%D9%88%D8%A7%D9%86%D8%B2"
+                },
+                 {
+                image:"https://static.namava.ir/Content/Upload/Images/006e6d8d-a6c6-491d-95ed-17296835d93f.jpg?anchor=middlecenter&crop=auto&scale=both&w=140&h=140",
+                title:"کی هوی کوان",
+                link:"https://www.namava.ir/person-92089-%DA%A9%DB%8C_%D9%87%D9%88%DB%8C_%DA%A9%D9%88%D8%A7%D9%86"
+                },
+                  {
+                image:"https://static.namava.ir/Content/Upload/Images/4fa33014-3fb2-4b8b-bb55-d77590fbb83c.jpg?anchor=middlecenter&crop=auto&scale=both&w=140&h=140",
+                title:"میشل یئو",
+                link:"https://www.namava.ir/person-10589-%D9%85%DB%8C%D8%B4%D9%84_%DB%8C%D8%A6%D9%88"
+                }
+            ]
+            // "
+            var tagUl = "<ul>";
+                for(var i=0; i<listArry.length;i++){
+                    tagUl += "<li>" + "<a href=" + listArry[i].link + ">" + "<img src=" + listArry[i].image + "/>" + "<p>" + listArry[i].title + "<p/>" + "</a>"+"</li>";
+
+                }
+                tagUl += "</ul>";
+                starlist.innerHTML= tagUl;
+                document.body.appendChild(starlist);
+
+                var section2 = document.createElement("div");
+                section2.innerHTML="solution2";
+                document.body.appendChild(section2);
+                section2.classList.add("section1Style");
+                var starTitle2 = document.createElement("h2");
+                starTitle2.innerHTML="ستارگان";
+                 document.body.appendChild(starTitle2);
+                 var ul2 = document.createElement("ul");
+                 for(var i=0; i<listArry.length;i++){
+                    var li = document.createElement("li");
+                    var a = document.createElement("a");
+                    a.href=listArry[i].link;
+                    li.appendChild(a);
+                    var image = document.createElement("img");
+                    image.src= listArry[i].image;
+                    a.appendChild(image); 
+                    var title = document.createElement("p");
+                    title.innerHTML= listArry[i].title;
+                    a.appendChild(title);
+                    ul2.appendChild(li);
+                }
+                document.body.appendChild(ul2);
+        </script>
+    </body>
+</html>
